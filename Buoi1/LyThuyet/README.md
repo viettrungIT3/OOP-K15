@@ -55,7 +55,7 @@ Một ví dụ khác. Ví dụ này mình sẽ dùng 1 hình ảnh để minh ho
     * Khi viết chương trình theo phong cách hướng đối tượng, việc thiết kế các đối tượng ta cần rút tỉa ra những đặc trưng chung của chúng rồi trừu tượng thành các *interface* và thiết kế xem chúng sẽ tương tác với nhau như thế nào.
 3. Tính kế thừa: 
     * Lớp cha có thể chia sẽ dữ liệu và phương thức cho các lớp con, các lớp con khỏi phải định nghĩa lại, giúp chương <br>trình ngắn gọn.
-4. Tính trừu tượng: 
+4. Tính đa hình: 
     * Là hiện tượng các đối tượng thuộc các lớp khác nhau có thể hiểu cùng một thông điệp theo các cách khác nhau.
 
 [Tham khảo](https://codelearn.io/sharing/hieu-ro-ve-lap-trinh-huong-doi-tuong)
