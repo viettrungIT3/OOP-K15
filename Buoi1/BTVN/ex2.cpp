@@ -43,7 +43,7 @@ void SinhVien::Nhap()
 //C2: cách này thường sử dụng cho dạng xuất danh sách
 void SinhVien::Xuat()
 {
-    cout<<left<<setw(10)<<maSV<<setw(30)<<hoTen<<setw(12)<<ngaySinh<<setw(10)<<gioiTinh<<setw(6)<<diemTB<<setw(16)<<xepLoaiDaoDuc<<endl;
+    cout<<left<<setw(10)<<maSV<<setw(30)<<hoTen<<setw(12)<<ngaySinh<<setw(10)<<gioiTinh<<setw(10)<<diemTB<<setw(16)<<xepLoaiDaoDuc<<endl;
 }
 
 int main(int argc, char const *argv[])
@@ -58,9 +58,9 @@ int main(int argc, char const *argv[])
     //Hoán đổi
     if (SVDiemCao.diemTB < SVDiemThap.diemTB)
     {
-        float temp = SVDiemCao.diemTB;
-        SVDiemCao.diemTB = SVDiemThap.diemTB;
-        SVDiemThap.diemTB = temp;
+        SinhVien temp = SVDiemCao;
+        SVDiemCao = SVDiemThap;
+        SVDiemThap = temp;
     }
     
 
@@ -73,7 +73,7 @@ int main(int argc, char const *argv[])
 
     //C2
     cout<<"\n--------------------------------- THONG TIN SINH VIEN ---------------------------------"<<endl;
-    cout<<left<<setw(10)<<"Ma SV"<<setw(30)<<"Ho Ten"<<setw(12)<<"Ngay Sinh"<<setw(10)<<"Gioi Tinh"<<setw(6)<<"Diem TB"<<setw(16)<<"Xep loai dao duc"<<endl;
+    cout<<left<<setw(10)<<"Ma SV"<<setw(30)<<"Ho Ten"<<setw(12)<<"Ngay Sinh"<<setw(10)<<"Gioi Tinh"<<setw(10)<<"Diem TB"<<setw(16)<<"Xep loai dao duc"<<endl;
     SVDiemCao.Xuat();
     SVDiemThap.Xuat();
     return 0;

@@ -12,7 +12,7 @@ public:
     int soNgay;
 
     void Nhap();
-    double TinhLuong();
+    long double TinhLuong();
     void Xuat();
 };
 
@@ -24,9 +24,9 @@ void CanBo::Nhap()
     cout<<"So ngay lam viec trong thang: ";     cin>>soNgay;
 }
 
-double CanBo::TinhLuong()
+long double CanBo::TinhLuong()
 {
-    return soNgay * 250000;
+    return soNgay * 250000.0;
 }
 
 void CanBo::Xuat()
