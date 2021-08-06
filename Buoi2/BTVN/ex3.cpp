@@ -56,19 +56,22 @@ void Hang::NHAP()
     cout << "Nhap ten hang : ";     fflush(stdin);      cin >> tenHang;
     cout << "Nhap ngay nhap: ";     fflush(stdin);      cin >> ngayNhap;
     cout << "Nhap ngay SX  : ";     fflush(stdin);      cin >> ngaySX;
-    cout << "Nhap don gia  : ";     cin>>donGia;
-    cout << "Nhap so luong : ";     cin>>SL;
+    cout << "Nhap don gia  : ";
+    cin >> donGia;
+    cout << "Nhap so luong : ";
+    cin >> SL;
 }
 
 void Hang::XUAT()
 {
     // cout << "===Xuat===" << endl;
-    cout << "Ma hang  : "<<maHang<<endl;
-    cout << "Ten hang : "<<tenHang<<endl;
-    cout << "Ngay nhap: "<<ngayNhap<<endl;
-    cout << "Ngay SX  : "<<ngaySX<<endl;
-    cout << "Don gia  : "<<donGia<<endl;
-    cout << "So luong : "<<SL<<endl;
+    cout << "Ma hang   : " << maHang << endl;
+    cout << "Ten hang  : " << tenHang << endl;
+    cout << "Ngay nhap : " << ngayNhap << endl;
+    cout << "Ngay SX   : " << ngaySX << endl;
+    cout << "Don gia   : " << donGia << endl;
+    cout << "So luong  : " << SL << endl;
+    cout << "Thanh tien: " << SL * donGia << endl;
 
     // cout<<left<<setw(10)<<maHang<<setw(20)<<tenHang<<setw(12)<<ngayNhap<<setw(12)<<ngaySX<<donGia<<SL<<endl;
 }
@@ -77,11 +80,11 @@ int main(int argc, char const *argv[])
 {
     Hang P;
     P.NHAP();
-    cout<<"Thong tin mat hang P: "<<endl;
+    cout << "Thong tin mat hang P: " << endl;
     P.XUAT();
 
     Hang Q("M123", "Banh gao", "1/7/2021", "1/1/2021", 20000.0, 100);
-    cout<<"Thong tin mat hang Q: "<<endl;
+    cout << "Thong tin mat hang Q: " << endl;
     Q.XUAT();
     return 0;
 }

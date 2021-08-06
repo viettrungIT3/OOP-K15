@@ -57,7 +57,7 @@ void PTB2::GIAI()
         if (delta < 0)
             cout << "Phuong trinh vo nghiem." << endl;
         else if (delta == 0)
-            cout << "Phuong trinh co 1 nghiem kep: x =" << -b / (2 * a) << endl;
+            cout << "Phuong trinh co 1 nghiem kep: x = " << -b / (2 * a) << endl;
         else
         {
             cout << "Phuong trinh co 2 nghiem phan biet: " << endl;

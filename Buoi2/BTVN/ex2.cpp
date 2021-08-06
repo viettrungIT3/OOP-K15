@@ -5,6 +5,7 @@ class PS
 {
 private:
     int a, b;
+
 public:
     PS(/* args */);
     PS(int a, int b);
@@ -34,12 +35,19 @@ PS::~PS()
 
 void PS::NHAP()
 {
-    cout<<"Nhap lan luot TS va MS: ";   cin>>a>>b;
+    cout << "Nhap lan luot TS va MS: ";
+    cin >> a >> b;
 }
 
 void PS::XUAT()
 {
-    cout<<a<<"/"<<b<<endl;
+    if ((a < 0 && b < 0) || (a > 0 && b < 0))
+    {
+        a = -a;
+        b = -b;
+    }
+
+    cout << a << "/" << b << endl;
 }
 
 void PS::RUT()
@@ -52,20 +60,18 @@ void PS::RUT()
 int main(int argc, char const *argv[])
 {
     PS P(4, 6);
-    cout<<"PS vua nhap: ";
+    cout << "PS vua nhap: ";
     P.XUAT();
-    cout<<"PS sau khi rut gon: ";
+    cout << "PS sau khi rut gon: ";
     P.RUT();
     P.XUAT();
 
-
     PS Q;
     Q.NHAP();
-    cout<<"PS vua nhap: ";
+    cout << "PS vua nhap: ";
     Q.XUAT();
-    cout<<"PS sau khi rut gon: ";
+    cout << "PS sau khi rut gon: ";
     Q.RUT();
     Q.XUAT();
     return 0;
 }
-
