@@ -41,6 +41,12 @@ void PS::NHAP()
 
 void PS::XUAT()
 {
+    if ( b == 0 )
+    {
+        cout<<"Error!"<<endl;
+        return;
+    }
+
     if ((a < 0 && b < 0) || (a > 0 && b < 0))
     {
         a = -a;
@@ -52,9 +58,12 @@ void PS::XUAT()
 
 void PS::RUT()
 {
-    int uclb = __gcd(a, b);
-    a /= uclb;
-    b /= uclb;
+    if (b != 0)
+    {
+        int ucln = __gcd(a, b);     // Tim UCLN
+        a /= ucln;
+        b /= ucln;
+    }
 }
 
 int main(int argc, char const *argv[])
