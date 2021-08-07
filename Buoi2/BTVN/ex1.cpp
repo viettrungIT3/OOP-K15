@@ -44,7 +44,7 @@ void PTB2::NHAP()
 
 void PTB2::XUAT()
 {
-    cout << "Phuong trinh: " << a << "X" << (char)253 << " + " << b << " X + " << c << " = 0 " << endl;
+    cout << "Phuong trinh: " << a << "X" << (char)253 << (b >= 0 ? "+" : "-") << abs(b) << "x" << (c >= 0 ? "+" : "-") << abs(c) << " = 0 " << endl;
 }
 
 void PTB2::GIAI()
@@ -69,7 +69,7 @@ void PTB2::GIAI()
 
 int main()
 {
-    PTB2 P(1, 2, 1);
+    PTB2 P(1, -2, 1);
     P.XUAT();
     P.GIAI();
     PTB2 Q;
