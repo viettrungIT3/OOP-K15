@@ -31,7 +31,7 @@ void NSX::Output()
     // cout << "\tManufacturer's address: " << diaChiNSX << endl;
 
     // C2:
-    cout << left << setw(10) << maNSX << setw(30) << tenNSX << setw(50) << diaChiNSX << endl;
+    cout << left << setw(24) << maNSX << setw(30) << tenNSX << setw(50) << diaChiNSX << endl;
 }
 
 class Hang
@@ -61,18 +61,17 @@ void Hang::Output()
     // x.Output();
 
     // C2:
-    cout << left << setw(10) << maHang << setw(30) << tenHang;
+    cout << left << setw(14) << maHang << setw(30) << tenHang;
     x.Output();
 }
 
 int main(int argc, char const *argv[])
 {
     int num;
-    Hang *items;
+    Hang items[1000];
 
     cout << "Enter the number of items: ";
     cin >> num;
-    items = new Hang[num];
 
     // INPUT
     for (int i = 0; i < num; i++)
@@ -83,7 +82,7 @@ int main(int argc, char const *argv[])
 
     // OUTPUT
     cout << "\n\nList of " << num << " items" << endl;
-    cout << left << setw(10) << "Ma Hang" << setw(30) << "Ten Hang" << setw(10) << "Ma NSX" << setw(30) << "Ten NSX" << setw(50) << "Dia Chi NSX" << endl;
+    cout << left << setw(14) << "Item code" << setw(30) << "Item name" << setw(24) << "Manufacturer's code" << setw(30) << "Manufacturer's code" << setw(50) << "Manufacturer's address" << endl;
     for (int i = 0; i < num; i++)
         items[i].Output();
 

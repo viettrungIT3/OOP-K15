@@ -45,11 +45,10 @@ void Employee::Output()
 int main(int argc, char const *argv[])
 {
     int num;
-    Employee *E;
+    Employee E[1000];
 
     cout << "Enter the number of employee: ";
     cin >> num;
-    E = new Employee[num];
 
     // INPUT
     for (int i = 0; i < num; i++)

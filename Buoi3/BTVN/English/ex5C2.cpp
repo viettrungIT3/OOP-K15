@@ -59,12 +59,21 @@ int main(int argc, char const *argv[])
             break;
     }
     
+    cout << "\n\nOUTPUT:" << endl;
     cout << left << setw(10) << "id" << setw(30) << "name" << setw(6) << "age" << endl;
     for (int i = 0; i < n; i++)
     {
         E[i].Output();
     }
     
-
+    delete[] E;
     return 0;
 }
+
+//     OUTPUT:
+//     id        name                          age   
+//     1         Trung                         21
+//     2         Huan                          21
+//     3         Chi Tinh                      21
+//     4         Anh                           20
+// 
