@@ -1,12 +1,43 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+class DiaChi
+{
+private: 
+	int soNha;
+	int ngo;
+	char pho[30];
+	char phuong[30];
+	char quan[30];
+	char thanhPho[30];
+
+public: 
+	void Nhap();
+	void Xuat();
+	friend class Nguoi;
+};
+
+void DiaChi::Nhap()
+{
+	cout << "Nhap dia chi: " << endl;    
+    cout << "  Nhap Ngo      : ";	cin >> ngo;
+    cout << "  Nhap So Nha   : ";	cin >> soNha;
+    cout << "  Nhap Pho      : ";	fflush(stdin);	gets(pho);
+    cout << "  Nhap Phuong   : ";	fflush(stdin);	gets(phuong);
+    cout << "  Nhap Quan     :"; 	fflush(stdin);	gets(quan);
+    cout << "  Nhap Thanh Pho:"; 	fflush(stdin);	gets(thanhPho);
+}
+
+void DiaChi::Xuat()
+{
+    cout << "So " << soNha << ", ngo " << ngo << " Pho " << pho << ", phuong " << phuong<< ", quan " << quan << ", TP " << thanhPho << endl;
+}
 class Nguoi
 {
 private:
     char hoTen[30];
     char sdt[12];
-    char diaChi[80];
+    DiaChi diaChi;
 public:
     void Nhap();
 	void Xuat();
@@ -16,15 +47,18 @@ public:
 void Nguoi::Nhap()
 {
     cout << "Nhap ho va ten nguoi di cho: ";    fflush(stdin);  gets(hoTen);
-    cout << "Nhap so dien thoai         : ";    fflush(stdin);  gets(sdt);
-    cout << "Nhap dia chi               : ";    fflush(stdin);  gets(diaChi);
+    cout << "Nhap so dien thoai: ";    fflush(stdin);  gets(sdt);
+
+	diaChi.Nhap();
 }
 
 void Nguoi::Xuat()
 {
     cout << "Ho va ten nguoi di cho: " << hoTen << endl;
     cout << "So dien thoai: " << sdt << endl;
-    cout << "Dia chi: " << diaChi << endl;
+    cout << "Dia chi: ";
+	diaChi.Xuat();
+	cout << endl;
 }
 
 class Hang
