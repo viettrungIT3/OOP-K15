@@ -97,10 +97,12 @@ void Phieu::Xuat()
 int main(int argc, char const *argv[])
 {
 	Phieu Phieu;
+
 	Phieu.Nhap();
+
 	cout << endl << endl;
+
 	Phieu.Xuat();
-	cout<<endl;
 	
 	return 0;
 }

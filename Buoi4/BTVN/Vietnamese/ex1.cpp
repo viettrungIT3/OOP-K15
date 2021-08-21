@@ -77,7 +77,6 @@ int main(int argc, char const *argv[])
         p[i].Nhap();
     }
     
-    
     cout << endl << endl;
     cout << "OUTPUT: "<<endl;
     cout << left << setw(10) << "Ma NS" << setw(30) << "Ho Ten" << "Ngay sinh" << endl;

@@ -109,8 +109,12 @@ void Phieu::Xuat()
 int main(int argc, char const *argv[])
 {
     Phieu P;
+
     P.Nhap();
+
     cout << endl << endl;
+
     P.Xuat();
+    
     return 0;
 }
