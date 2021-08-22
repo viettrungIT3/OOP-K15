@@ -11,7 +11,6 @@ private:
 public:
     void Input();
     void Output();
-    friend class Pesonnel;
 };
 void Date::Input()
 {
@@ -87,5 +86,7 @@ int main(int argc, char const *argv[])
     {
         p[i].Output();
     }
+
+    delete[] p;
     return 0;
 }

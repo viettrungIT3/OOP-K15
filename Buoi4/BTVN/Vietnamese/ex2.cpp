@@ -11,7 +11,6 @@ private:
 public:
 	void Nhap();
 	void Xuat();
-	friend class Phieu;
 };
 void NCC::Nhap()
 {

@@ -14,7 +14,6 @@ private:
 public: 
 	void Nhap();
 	void Xuat();
-	friend class Nguoi;
 };
 
 void DiaChi::Nhap()
@@ -41,7 +40,6 @@ private:
 public:
     void Nhap();
 	void Xuat();
-	friend class Phieu;
 };
 
 void Nguoi::Nhap()

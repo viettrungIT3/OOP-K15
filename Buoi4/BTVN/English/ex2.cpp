@@ -11,7 +11,6 @@ private:
 public:
 	void Input();
 	void Output();
-	friend class Card;
 };
 void Provider::Input()
 {

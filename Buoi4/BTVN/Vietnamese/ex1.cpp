@@ -83,5 +83,7 @@ int main(int argc, char const *argv[])
     for (int i = 0; i < num; i++)
         p[i].Xuat();
     
+
+    delete[] p;
     return 0;
 }
