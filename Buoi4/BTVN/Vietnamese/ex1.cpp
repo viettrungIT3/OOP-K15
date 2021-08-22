@@ -8,7 +8,6 @@ private:
 public:
     void Nhap();
     void Xuat();
-    friend class NhanSu;
 };
 
 void Date::Nhap()
