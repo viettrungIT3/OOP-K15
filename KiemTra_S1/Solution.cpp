@@ -23,6 +23,18 @@ public:
     //	friend class Phieu;
 };
 
+void SanPham::Nhap()
+{
+    cout << "Nhap ma SP   : ";  fflush(stdin); gets(maSP);
+    cout << "Nhap ten SP  : ";  fflush(stdin); gets(tenSP);
+    cout << "Nhap so luong: ";  cin >> soLuong;
+    cout << "Nhap don gia : ";  cin >> donGia;
+}
+void SanPham::Xuat()
+{
+    cout << left << setw(15) << maSP << setw(20) << tenSP << setw(15) << soLuong << setw(15) << donGia
+         << setw(15) << ThanhTien() << endl;
+}
 class NCC
 {
 private:
@@ -65,19 +77,7 @@ public:
     friend void Chen(Phieu &a, SanPham x, int pos);
 };
 
-//dinh nghia
-void SanPham::Nhap()
-{
-    cout << "Nhap ma SP   : ";  fflush(stdin); gets(maSP);
-    cout << "Nhap ten SP  : ";  fflush(stdin); gets(tenSP);
-    cout << "Nhap so luong: ";  cin >> soLuong;
-    cout << "Nhap don gia : ";  cin >> donGia;
-}
-void SanPham::Xuat()
-{
-    cout << left << setw(15) << maSP << setw(20) << tenSP << setw(15) << soLuong << setw(15) << donGia
-         << setw(15) << ThanhTien() << endl;
-}
+
 
 void Phieu::Nhap()
 {
@@ -94,6 +94,7 @@ void Phieu::Nhap()
         sanPhams[i].Nhap();
     }
 }
+
 void Phieu::Xuat()
 {
     cout << "\nDai hoc Victory" << endl;
@@ -121,6 +122,7 @@ void Phieu::Xuat()
     cout << right << "\tHieu truong" << setw(25) << "Phong tai chinh" << setw(25) << "Nguoi Lap" << endl;
 }
 
+// Bonus 1:
 void SapXep(Phieu a)
 { 
     for (int i = 0; i < a.n - 1; i++)
@@ -133,6 +135,7 @@ void SapXep(Phieu a)
             }
 }
 
+// Bonus 2:
 void Chen(Phieu &a, SanPham x, int pos)
 {
     a.sanPhams = (SanPham *)realloc(a.sanPhams, (a.n + 1) * sizeof(SanPham));
