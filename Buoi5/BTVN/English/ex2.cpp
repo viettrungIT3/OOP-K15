@@ -43,7 +43,7 @@ void Room::Input()
 	cout << "Enter Room Information: " << endl;
 	cout << "  Enter room name: ";	fflush(stdin);	gets(roomName);
 	cout << "  Enter room No  : ";	fflush(stdin);	gets(roomNo);
-	cout << "  Enter manager  : ";	fflush(stdin);	gets(roomNo);
+	cout << "  Enter manager  : ";	fflush(stdin);	gets(managerName);
 }
 
 void Room::Output()
